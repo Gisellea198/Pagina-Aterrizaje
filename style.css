@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    background-color: #FEC89A;
+    font-family: 'Indie Flower', cursive;
+    
+  }
+
+  body h2 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  body p{
+    font-size: 25px;
+      
+  }
+
+
+  
+  #page-wrapper {
+    position: relative;
+  }
+  
+  li {
+    list-style: none;
+    
+  }
+  
+  a {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 3px black solid;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .grid {
+    display: flex;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 75px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F4AD0D;
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .logo {
+    width: 60vw;
+  }
+  
+  @media (max-width: 650px) {
+    .logo {
+      margin-top: 15px;
+      width: 100%;
+      position: relative;
+    }
+  }
+  
+  .logo > img {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+  }
+  
+  @media (max-width: 650px) {
+    .logo > img {
+      margin: 0 auto;
+    }
+  }
+  
+ .nav-bar {
+   height: 100px;
+   background: #F4AD0D;
+ }
+  
+  nav {
+    float: left;
+    width:100%;
+  }
+  
+  .nav-menu {
+    display:blocK;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+  
+  nav ul li a:not(:only-child):after {
+    padding-left: 5px;
+    content: ' ▾';
+  }
+  
+  .nav-movil {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 979px) {
+    .nav-movil {
+      display: block;
+    }
+  
+    .nav-menu {
+      display: none;
+      margin-top: 70px;
+    }
+    
+    .nav-menu li {
+      float: none;
+    }
+    .nav-menu li a {
+      padding: 20px;
+      line-height: 20px;
+    }
+    .nav-menu li ul li a {
+      padding-left: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 980px) {
+    .nav-menu {
+      display: block !important;
+    }  
+  }
+  
+  #nav-boton {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    cursor: pointer;
+    width:20px;
+    height: 10px;
+    padding: 5px 15px 15px 0px;
+    z-index:1;
+  }
+  
+  #nav-boton span,
+  #nav-boton span:after,
+  #nav-boton span:before {
+    transition: all 500ms ease-in-out;
+    border-radius: 1px;
+    height: 5px;
+    width: 40px;
+    position: absolute;
+    display: block;
+    content: "";
+    background: #fff;
+  }
+  
+  #nav-boton span ::before {
+    top: -10px;
+  }
+  #nav-boton span ::after {
+    bottom: -10px;
+  }
+  
+  #nav-boton.activo span {
+    background-color: transparent;
+  }
+  
+  #nav-boton.activo span ::before,
+  #nav-boton.activo span ::after {
+    top: 0;
+  }
+  
+  #nav-boton.activo span ::after {
+    transform: rotate(-45deg);
+  }
+  
+  #nav-boton.activo span ::before {
+    transform: rotate(45deg);
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 350px;
+    width: 100%;
+    margin-top: 50px;
+    background: url(https://i2.wp.com/irecetasfaciles.com/wp-content/uploads/2021/01/Cachapa-venezolana.jpg?fit=1200%2C766&ssl=1&mrf-size=m) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #eee;
+  }
+  
+  #hero > h2 {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    font-weight: bold;
+    }
+
+  .stroke{
+    text-align: center;
+    color: rgb(252, 6, 6);
+    font-family: 'Courgette', cursive;
+    font-size: 22px;
+    margin-top: 10%;
+    width: 100%;
+    text-shadow: -0.1px -0.1px 0.1px #eee, 0.1px 0.1px 0.1px #eee, -0.1px 0.1px 0.1px #eee, 0.1px -0.1px 0.1px #eee;
+    -webkit-text-fill-color: rgb(252, 6, 6);
+    -webkit-text-stroke: 0.1px white;
+    }
+  
+  #hero input[type='email'] {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 15%  ;
+  }
+  
+  #hero input[type='submit'] {
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 15px;
+    border: 0;
+    background-color: #f1c40f;
+  }
+  
+  #hero input[type='submit']:hover {
+    background-color: orange;
+    transition: background-color 1s;
+  }
+  
+  @media (max-width: 650px) {
+    #hero {
+      margin-top: 120px;
+    }
+  }
+  
+
+  #inicio {
+    margin-top: 30px;
+    height: 180px;
+    width: 100%;  
+  }
+
+  @media (max-width: 650px) {
+    #inicio {
+      
+      margin: 30px 0 30px 15px;
+    }
+  }
+
+  #delivery {
+    margin-top: 30px;
+    height: 180px;
+    width: 100%;
+    }
+
+    @media (max-width: 650px) {
+      #delivery {
+        
+        margin: 30px 0 30px 15px;
+      }
+    }
+
+  #promociones {
+    margin-top: 30px;
+    height: 180px;
+    width: 100%;
+    }
+
+    @media (max-width: 650px) {
+      #promociones {
+        
+        margin: 30px 0 30px 15px;
+      }
+    }
+  #imagen {
+    float:left;
+    height: 150px;
+    width: 200px;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 550px) {
+    #imagen {
+      display: none;
+    }
+  }
+
+  #contacto {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #contacto > iframe {
+    max-width: 560px;
+    width: 100%;
+  }
+  
+  
+  
+  #menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+    padding-top: 75px;
+  }
+  
+  .container {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap : wrap;
+    align-items: flex-start;
+    color: #555B6E;
+    width: 375px;
+    }
+  
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: calc(100% / 3);
+      margin: 10px;
+      border: 1px solid #000;
+      border-radius: 3px;
+    }
+    
+    .product > .level {
+      background-color: #ddd;
+      color: black;
+      padding: 15px 0;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    
+    .product > h2 {
+      margin-top: 15px;
+    }
+    
+    .product > ol {
+      margin: 15px 0;
+    }
+    
+    .product > ol > li {
+      padding: 5px 0;
+    }
+    
+    .product > button {
+      border: 0;
+      margin: 15px 0;
+      background-color: #f1c40f;
+      font-weight: 400;
+    }
+    
+    .product > button:hover {
+      background-color: orange;
+      transition: background-color 1s;
+    }
+    
+    @media (max-width: 800px) {
+      #menu {
+        flex-direction: column;
+      }
+      .menu {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+    }
+  
+  
+  footer {
+    margin-top: 30px;
+    background-color: #ddd;
+    padding: 20px;
+  }
+  
+  footer > ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  footer > ul > li {
+    padding: 0 10px;
+  }
+  
+  footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+  }
+
+
+ 
